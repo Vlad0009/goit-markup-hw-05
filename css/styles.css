@@ -105,13 +105,7 @@ img {
     display: flex;
 }
 
-/* .site-list .page-item {
-        outline: 2px solid tomato;
-} */
 
-/* .site-list .page-item + .page-item {
-    margin-left: 50px;   
-} */
 
 .site-list .page-item:not(:last-child) {
     margin-right: 50px;   
@@ -121,12 +115,12 @@ img {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-
-color:var(--primary-text-color);  
-font-weight: 500;
-line-height: 1.14;
-letter-spacing: 0.02em;
-text-decoration: none;
+    color:var(--primary-text-color);  
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current {
@@ -168,7 +162,7 @@ text-decoration: none;
     text-decoration: none;
     align-items: center;
     fill: var(--title-text-color);
-
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts:hover,
@@ -176,7 +170,7 @@ text-decoration: none;
 .smartphone:hover,
 .smartphone:focus {
     fill: var(--primary-title-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .envelope,
@@ -212,13 +206,19 @@ margin-right: 10px;
 
 .site-contacts .contacts {
     color: var(--title-text-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.site-list .page-title{
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .site-list .page-title:hover,
 .site-list .page-title:focus,
 .site-contacts .contacts:hover,
 .site-contacts .contacts:focus {
     color: var(--primary-title-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 } 
 
 
@@ -310,6 +310,7 @@ cursor: pointer;
 background: var(--primary-title-color);
 text-align: center;
 border-color: transparent;
+transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-hero:active {
@@ -320,7 +321,7 @@ border-color: transparent;
 .link-hero:focus {
           color: var(--header-bkg-title);
           background: var(--header-btn-active);
-          transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+          
 }
 
 .title-hero {
@@ -334,7 +335,8 @@ display: inline-block;
 align-items: center;
 text-align: center;
 letter-spacing: 0.06em;
-color: var(--primary-button-text)
+color: var(--primary-button-text);
+
 }
 
 
@@ -350,7 +352,8 @@ button {
     height: 1024px;
     left: 0;
     top: 0;
-    background: rgba(0, 0, 0, 0.2);;
+    background: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
  .backdrop.is-hidden {
@@ -372,6 +375,7 @@ button {
 }
 
 .close-button {
+    cursor: pointer;
     position: absolute;
 top: 8px;
 right: 8px;
@@ -522,13 +526,13 @@ background-position: center;
     background-repeat: no-repeat;
     background-position: center;
     fill: var(--svg-clients-brd);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     } 
 
     .social:hover,
     .social:focus {
         fill: var(--primary-background-color);
-        background: var(--primary-title-color);
-        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: var(--primary-title-color);
     }
 
 
@@ -611,11 +615,12 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
 
 .project-link {
     display: block;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);  
 }
 .project-link:hover,
 .project-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+    
 }
 
 .project-title {
@@ -643,32 +648,35 @@ img {
     display: flex;
     margin-top: 0px;
     margin-bottom: 50px;
-        justify-content: center;
-        padding: 0;
-      }
+    justify-content: center;
+    padding: 0;
+    transition-property: color, background, box-shadow;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .btn-links .button:hover,
 .btn-links .button:focus {
         color: var(--header-bkg-title);
         background: var(--primary-title-color);
-        border-radius: 4px;
         box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
+    }
+
 .btn-links .button:active {
         background: var(--primary-title-color);
       }
+      
 .btn-style {
     font-family: inherit;
     font-weight: 500;
 font-size: 16px;
 line-height: 1.62;
 border-color: transparent;
+border-radius: 4px;
 /* identical to box height, or 162% */
-
 text-align: center;
 letter-spacing: 0.03em;
 padding: 6px 22px;
+
 }
 
 .filter-style:not(:last-child) {
@@ -714,12 +722,12 @@ border-top: none;
 }
 
 .project-link {
-    
-
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pjt-logo {
    position: relative;
+   overflow: hidden;
 }
 
 .list-characteristic {
@@ -736,7 +744,7 @@ margin-top: 0;
 .project-link:focus .pjt-overlay {
     transform: translateY(0);
     opacity: 1;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
     }
 
 .pjt-description {
@@ -773,14 +781,14 @@ margin-top: 0;
     border-radius: 4px;
     border: 1px solid var(--svg-clients-brd);
     fill: var(--svg-clients-brd);
-    
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .svg-client:hover,
 .svg-client:focus {
     fill: var(--primary-title-color);
     border: 1px solid var(--primary-title-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 } 
 
 
@@ -855,12 +863,13 @@ padding-left: 0;
 
 .footer-contacts .contacts {
     color: var(--title-text-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contacts .contacts:hover,
 .footer-contacts .contacts:focus {
     color: var(--primary-title-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 } 
 
 .footer-social {
@@ -894,13 +903,13 @@ background-position: center;
     height: 44px;
     width: 44px;
     border-radius: 50%;
-
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fsoc-list:hover,
 .fsoc-list:focus {
     background-color: var(--primary-title-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .foot-soc {
@@ -915,10 +924,11 @@ margin-right: 10px;
 
 .soc-item {
     fill: var(--primary-background-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-.soc-item:hover,
+/* .soc-item:hover,
 .soc-item:focus {
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    
+} */
 
